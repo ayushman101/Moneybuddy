@@ -1,9 +1,9 @@
 import { Pressable, StyleSheet } from "react-native"
-import {Ionicons} from '@expo/vector-icons'
-const CustomIconButton =({name, size, color, onPress})=>{
+import {MaterialIcons} from '@expo/vector-icons'
+const CustomIconButton =({name, size, color, onPress,style})=>{
     return (
-        <Pressable onPress={onPress} style={(pressed) => {pressed ? styles.pressed : {}}}>
-            <Ionicons name={name} size={size} color={color} />
+        <Pressable onPress={onPress} style={[style,styles.pressed]}>
+            <MaterialIcons name={name} size={size} color={color} />
         </Pressable>
     )
 }

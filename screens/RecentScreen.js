@@ -1,9 +1,25 @@
-import { Text } from "react-native";
+import { View,StyleSheet } from "react-native";
+import ExpenseCard from "../components/ExpenseCard";
+import AddExpenseCard from "../components/AddExpenseCard";
 
 const RecentScreen=()=>{
     return(
-        <Text>RecentScreen</Text>
+        <View style={styles.rootStyle}>
+            <View>
+
+            </View>
+            <View>
+                <ExpenseCard title='Whopper' price={100} date={new Date()}/>
+            </View>
+        </View>
     )
 }
+
+
+const styles=StyleSheet.create({
+    rootStyle:{
+        // alignItems:'center'
+    }
+})
 
 export default RecentScreen
